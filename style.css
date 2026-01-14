@@ -1,0 +1,308 @@
+/*  VARIABLES & RESET  */
+:root {
+    --navy: #0f1c2e;
+    --gold: #c9a44d;
+    --white: #ffffff;
+    --light-bg: #f5f6f8;
+    --text-dark: #1e1e1e;
+    --border-light: #ccc;
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/*  NAVBAR  */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 70px;
+    background-color: rgba(15,28,46,0.9);
+    z-index: 10;
+    transition: background-color var(--transition);
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+/*  HOME  */
+.home-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 60px;
+    background: linear-gradient(rgba(15,28,46,0.8), rgba(15,28,46,0.8)), url("Images/hero.png") center / cover no-repeat;
+    color: var(--white);
+    position: relative;
+}
+
+.home-text {
+    max-width: 620px;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.home-text h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.primary-btn,
+.secondary-btn {
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 15px 30px;
+    border-radius: 4px;
+    transition: all var(--transition);
+}
+
+.primary-btn {
+    background-color: var(--gold);
+    color: var(--navy);
+}
+
+.primary-btn:hover {
+    background-color: #b8923f;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.secondary-btn:hover {
+    background-color: var(--white);
+    color: var(--navy);
+}
+
+/*  ABOUT SECTION  */
+.about-section {
+    padding: 100px 60px;
+    background-color: #f8f9fb; 
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 60px;
+    flex-wrap: wrap; 
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1e1e1e;
+}
+
+/*  CLIENT STATS  */
+.clients-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 50px;
+    background-color: var(--navy);
+    color: var(--white);
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.clients-block h3 {
+    font-size: 36px;
+    color: var(--gold);
+}
+
+.clients-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/*  PRACTICE AREAS SECTION  */
+.practice-area-section {
+    padding: 100px 60px;
+    background-color: var(--light-bg); 
+    text-align: center;
+}
+
+.practice-area-section h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+}
+
+.practice-block {
+    background-color: var(--white);
+    padding: 40px;
+    border-left: 5px solid var(--gold);
+    font-weight: 600;
+    text-align: center;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.practice-block .icon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/*  CONTACT SECTION  */
+.contact-section {
+    padding: 100px 60px;
+    background-color: var(--navy); 
+    text-align: center; 
+}
+
+.contact-section .section-title {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto; 
+    text-align: left; 
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--border-light);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold);
+    outline: none;
+}
+
+.contact-form button {
+    background: transparent;
+    color: var(--white);
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid var(--white);
+}
+
+.contact-form button:hover {
+    background-color: var(--white);
+    color: var(--navy);
+    transform: translateY(-2px);
+}
+
+/*  FOOTER  */
+.footer {
+    background-color: var(--white);
+    color: var(--navy);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+/*  ANIMATIONS  */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
